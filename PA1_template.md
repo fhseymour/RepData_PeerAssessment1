@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -43,7 +48,7 @@ medianStepsPerDay <- median(stepsPerDay, na.rm=TRUE)
 hist(stepsPerDay, breaks=10, xlab="Total Steps Per Day")
 ```
 
-![](PA1_template_files/figure-html/stepsPerDay-1.png) 
+![plot of chunk stepsPerDay](figure/stepsPerDay-1.png) 
 
 **The mean number of steps taken each day is : 9354.23**  
 **The median of the number of steps taken each day is : 10395**  
@@ -70,7 +75,7 @@ plot(t$TimeOfDay, t$ActivityPattern, type="l",
      ylab = "Average Steps Per 5 Minute Interval")
 ```
 
-![](PA1_template_files/figure-html/plotTimeOfDaySteps-1.png) 
+![plot of chunk plotTimeOfDaySteps](figure/plotTimeOfDaySteps-1.png) 
 
 ```r
 # computes the time of the maximum step activity
@@ -112,7 +117,7 @@ hist(stepsPerDayAll, breaks=10,
      xlab="Total Steps Per Day")
 ```
 
-![](PA1_template_files/figure-html/recalcStepTotal-1.png) 
+![plot of chunk recalcStepTotal](figure/recalcStepTotal-1.png) 
 
 ```r
 meanStepsPerDayAll <- sprintf("%.2f", mean(stepsPerDayAll, na.rm=TRUE))
@@ -176,6 +181,6 @@ with(t, {
 })
 ```
 
-![](PA1_template_files/figure-html/plotActivity-1.png) 
+![plot of chunk plotActivity](figure/plotActivity-1.png) 
 
 Yes.  There are noticeable differences in activity patterns between weekdays and weekends.  
